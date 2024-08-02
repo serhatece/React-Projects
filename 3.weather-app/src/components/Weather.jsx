@@ -9,8 +9,6 @@ import wind_icon from '../assets/wind.png';
 import snow_icon from '../assets/snow.png';
 import { useEffect, useRef, useState } from 'react';
 
-
-
 const Weather = () => {
 
     const inputRef = useRef();
@@ -47,7 +45,6 @@ const Weather = () => {
                 alert(data.message);
                 return;
             }
-            console.log(data)
             const icon = allIcons[data.weather[0].icon] || clear_icon;
             setWeatherData({
                 humidity: data.main.humidity,
