@@ -10,7 +10,6 @@ import snow_icon from '../assets/snow.png';
 import { useEffect, useRef, useState } from 'react';
 
 const Weather = () => {
-
     const inputRef = useRef();
     const [weatherdata, setWeatherData] = useState(false);
 
@@ -29,11 +28,11 @@ const Weather = () => {
         "10n": rain_icon,
         "13d": snow_icon,
         "13n": snow_icon
-    }
+    };
 
     const search = async (city) => {
         if (city === "") {
-            alert("Enter City Name")
+            alert("Enter City Name");
             return;
         }
         try {
@@ -45,23 +44,27 @@ const Weather = () => {
                 alert(data.message);
                 return;
             }
+            console.log(data);
             const icon = allIcons[data.weather[0].icon] || clear_icon;
+            // Convert wind speed from m/s to km/h
+            const windSpeedKmH = (data.wind.speed * 3.6).toFixed(2);
+
             setWeatherData({
                 humidity: data.main.humidity,
-                windSpeed: data.wind.speed,
+                windSpeed: windSpeedKmH,
                 temperature: Math.floor(data.main.temp),
                 location: data.name,
                 icon: icon
-            })
+            });
         } catch (error) {
-            setWeatherData(false)
-            console.error("error")
+            setWeatherData(false);
+            console.error("error");
         }
-    }
+    };
 
     useEffect(() => {
-        search("Ankara")
-    }, [])
+        search("Ankara");
+    }, []);
 
     return (
         <div className='weather'>
@@ -84,14 +87,14 @@ const Weather = () => {
                     <div className="col">
                         <img src={wind_icon} alt="" />
                         <div>
-                            <p>{weatherdata.windSpeed} Km/h</p>
+                            <p>{weatherdata.windSpeed} km/h</p>
                             <span>Wind</span>
                         </div>
                     </div>
                 </div>
             </> : <></>}
-
         </div>
-    )
-}
-export default Weather
+    );
+};
+
+export default Weather;
