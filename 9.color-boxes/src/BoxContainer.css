@@ -1,0 +1,10 @@
+.BoxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Kutular arasındaki boşluk */
+  padding: 20px; /* Dış boşluk eklendi */
+  max-width: 80vw; /* Daha düzgün hizalama için genişlik sınırı eklendi */
+  margin: 0 auto;
+}

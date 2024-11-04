@@ -1,0 +1,12 @@
+.Box {
+  height: 12em;
+  width: 12em;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Renk değişiminde yumuşak geçiş */
+  border-radius: 10px; /* Kutulara yuvarlak köşeler eklendi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgelendirme ile derinlik verildi */
+}
+
+.Box:hover {
+  transform: scale(1.05); /* Hover efektinde kutunun büyümesi sağlandı */
+}

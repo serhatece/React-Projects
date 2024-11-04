@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Uygulama logosu için stil */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* Hareket tercihine göre animasyon */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Uygulama başlığı stil */
+.App-header {
+  background-color: #1f2630; /* Daha koyu bir ton için renk güncellendi */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #e0e0e0; /* Beyaz renkte hafif kırık bir ton */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hafif gölgelendirme eklendi */
+}
+
+/* Uygulama bağlantıları */
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #4ea8d4; /* Hover durumunda daha koyu mavi */
+}
+
+/* Logo animasyon tanımı */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
