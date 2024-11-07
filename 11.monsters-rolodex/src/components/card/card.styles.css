@@ -1,0 +1,31 @@
+.card-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+  cursor: pointer;
+  border: 2px solid #ced4da;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-container img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card-container h2 {
+  font-size: 1.5rem;
+  color: #343a40;
+  margin: 10px 0;
+}
+
+.card-container p {
+  font-size: 1rem;
+  color: #6c757d;
+}
